@@ -1,0 +1,163 @@
+h1{
+    font-size: 40px;
+    color: #082032;
+}
+
+h2{
+    font-size: 30px;
+    color: #FF4C29;
+}
+
+h5{
+    text-align: right;
+}
+
+.left{
+    text-align: left;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #FDE49C;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/photo-professional.jpg);
+    background-attachment: fixed;
+    background-position:0px; 
+}
+
+header{
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+nav{
+    padding: 20px;
+    background-color: #082032;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-enlace{
+    color: #082032;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #EEEEEE;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background: #FDE49C;
+    margin-right: 10px;
+    box-shadow: 3px 3px 1px rgb(52, 136, 155);
+}
+
+.nav-enlace:hover{
+    color: #082032;
+    background: #FF4C29;
+    border: 1px solid #EEEEEE;
+    cursor: pointer;
+}
+
+section{
+    margin: 20px;
+    width: 60%;
+    float: left;
+}
+
+article{
+    display: block;
+    margin: 20px;
+    padding: 15px;
+    line-height: 20pt;
+    border: 1px solid #FDE49C;
+    box-shadow: 10px 10px 5px rgb(52, 136, 155);
+}
+
+p{
+    line-height: 20pt;
+    text-align: justify;
+}
+
+.cintillo{
+    font-size: 60px;
+    text-align: center;
+    color: #FFB740;
+}
+
+.agrupar{
+    background: #00C1D4;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+table{   
+    background-color:#082032;
+    border:  #EEEEEE 1px solid;
+    width: 100%;
+    box-shadow: 10px 10px 5px rgb(52, 136, 155);
+}
+
+td, tr{
+    border: #EEEEEE 1px solid;
+}
+
+.columna{
+    float: left;
+    border: 1px solid #EEEEEE;
+    margin: 41px;
+    margin-left: 0px;
+    margin-right: 20px;
+    width: 33%;
+    font-size: 20px;
+    box-shadow: 10px 10px 5px rgb(52, 136, 155);
+}
+
+.columna blockquote{
+    border: 1px solid #EEEEEE;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 275px;
+    font-size: 16px;
+    box-shadow: 10px 10px 5px rgb(52, 136, 155); 
+}
+
+.pie {
+    background-color: black ;
+    clear: both;
+    color:#EEEEEE;
+    font-size:12px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+.img_articulo{
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px rgb(52, 136, 155);
+}
+
+.imagentres{
+    border-radius: 5px;
+    height: 200px;
+    width: 280px;
+}
+
+.imagenenlaces{
+    border-radius: 5px;
+    height: 70px;
+    width: 190px;
+    object-fit: cover;
+}
+
+.img1 {
+    object-fit: cover;
+}
+
+.img2 {
+    border-radius: 5px;
+}
