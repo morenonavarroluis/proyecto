@@ -3,13 +3,13 @@
   <li class="{% if 'dashboard' in segment %} active {% endif %}">
     <a href="/">
       <i class="tim-icons icon-chart-pie-36"></i>
-      <p>Dashboard</p>
+      <p>Inicio</p>
     </a>
   </li>
   <li class="{% if 'dynamic_dt' in segment %} active {% endif %}">
     <a href="{% url "dynamic_dt" %}">
       <i class="tim-icons icon-puzzle-10"></i>
-      <p>Dynamic Tables</p>
+      <p>Tabla dinamica</p>
     </a>
   </li>   
   <li class="{% if 'dynamic_api' in segment %} active {% endif %}">
@@ -21,7 +21,7 @@
   <li class="{% if 'charts' in segment %} active {% endif %}">
     <a href="{% url "charts" %}">
       <i class="tim-icons icon-chart-bar-32"></i>
-      <p>Charts</p>
+      <p>Graficas</p>
     </a>
   </li>  
   
@@ -29,7 +29,7 @@
   <li>
     <a href="{% url 'logout' %}">
       <i class="tim-icons icon-button-power"></i>
-      <p>Logout</p>
+      <p>Salir</p>
     </a>
   </li>
   {% else %}
@@ -37,7 +37,7 @@
     <a data-toggle="collapse" href="#pagesExamples">
       <i class="tim-icons icon-lock-circle"></i>
       <p>
-        Authentication
+        Autenticacion
         <b class="caret"></b>
       </p>
     </a>
@@ -52,7 +52,7 @@
         <li>
           <a href="{% url 'auth_signup' %}">
             <span class="sidebar-mini-icon">R</span>
-            <span class="sidebar-normal"> Register </span>
+            <span class="sidebar-normal"> Registro </span>
           </a>
         </li>
       </ul>
@@ -63,43 +63,43 @@
   <li class="{% if 'icons' in segment %} active {% endif %}">
     <a href="{% url 'icons' %}">
       <i class="tim-icons icon-atom"></i>
-      <p>Icons</p>
+      <p>Iconos</p>
     </a>
   </li>
   <li class="{% if 'map' in segment %} active {% endif %}">
     <a href="{% url 'map' %}">
       <i class="tim-icons icon-pin"></i>
-      <p>Maps</p>
+      <p>Mapas</p>
     </a>
   </li>
   <li class="{% if 'notifications' in segment %} active {% endif %}">
     <a href="{% url 'notifications' %}">
       <i class="tim-icons icon-bell-55"></i>
-      <p>Notifications</p>
+      <p>Notificaciones</p>
     </a>
   </li>
   <li class="{% if 'user_profile' in segment %} active {% endif %}">
     <a href="{% url 'user_profile' %}">
       <i class="tim-icons icon-single-02"></i>
-      <p>User Profile</p>
+      <p>Perfil</p>
     </a>
   </li>
   <li class="{% if 'tables' in segment %} active {% endif %}">
     <a href="{% url 'tables' %}">
       <i class="tim-icons icon-puzzle-10"></i>
-      <p>Table List</p>
+      <p>Lista de tablas</p>
     </a>
   </li>
   <li class="{% if 'typography' in segment %} active {% endif %}">
     <a href="{% url 'typography' %}">
       <i class="tim-icons icon-align-center"></i>
-      <p>Typography</p>
+      <p>Tipografia</p>
     </a>
   </li>
   <li class="{% if 'rtl' in segment %} active {% endif %}">
     <a href="{% url 'rtl' %}">
       <i class="tim-icons icon-world"></i>
-      <p>RTL Support</p>
+      <p>Soporte</p>
     </a>
   </li>
 
