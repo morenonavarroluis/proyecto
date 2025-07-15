@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block titulo %}
-    Inicio
+    Empleados
 {% endblock %}  
 
 {% block contenido %}
@@ -27,15 +27,17 @@
                 </tr>
             </thead>
             <tbody>
+                {% for empleado in empleado %}
                 <tr class="">
-                    <td>Manuel</td>
-                    <td>navarro</td>
-                    <td>31158004</td>
-                    <td>imagen.jpg</td>
-                    <td><a class="btn btn-primary" href="{% url 'editar' %}" role="button" >Editar</a> | <a class="btn btn-danger" href="#" role="button">Button</a>
+                    <td>{{ empleado.nombre }}</td>
+                    <td>{{ empleado.apellido }}</td>
+                    <td>{{ empleado.cargo }}</td>
+                    <td><img src="{{ empleado.foto.url }}" alt="Foto de {{ empleado.nombre }}" style="width: 50px; height: 50px;"></td>
+                    <td><a class="btn btn-primary" href="{% url 'editar' empleado.id %}" role="button" >Editar</a> | <a class="btn btn-danger" href="{% url 'eliminar' empleado.id %}" role="button">Eliminar</a>
                     
                     </td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
