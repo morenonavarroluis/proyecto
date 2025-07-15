@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    Inicio
+{% endblock %}  
+
+{% block contenido %}
+<div class="container mt-4">   
+
+    <a class="btn btn-primary m-2" href="{% url 'registrar' %}" role="button">Registrar nuvo empleado</a>
+    
+  
+    <div
+        class="table-responsive"
+    >
+        <table
+            class="table table-striped table-bordered"
+        >
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Acciones</th>
+                 
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>Manuel</td>
+                    <td>navarro</td>
+                    <td>31158004</td>
+                    <td>imagen.jpg</td>
+                    <td><a class="btn btn-primary" href="{% url 'editar' %}" role="button" >Editar</a> | <a class="btn btn-danger" href="#" role="button">Button</a>
+                    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+     
+</div>
+{% endblock %}
