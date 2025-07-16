@@ -32,3 +32,4 @@ def eliminar(request, id):
     empleado = Empleado.objects.get(id=id)
     empleado.delete()
     return redirect('index')
+

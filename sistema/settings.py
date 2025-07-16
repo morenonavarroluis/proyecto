@@ -129,3 +129,9 @@ MEDIA_URL = '/imagenes/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Configuración de archivos estáticos
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
