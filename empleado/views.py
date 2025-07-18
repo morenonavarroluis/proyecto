@@ -1,8 +1,16 @@
 from django.shortcuts import render ,redirect
 from .models import Empleado
 from .forms import EmpleadoForm
+from  django.contrib.auth.decorators import login_required
 # Create your views here.
 
+def login(request):
+    return render(request, 'registration/login.html')
+
+def registration(request):
+    return render(request, 'registration/regestrar.html')
+
+@login_required
 def inicio(request):
     return render(request, 'paginas/inicio.html')
 
