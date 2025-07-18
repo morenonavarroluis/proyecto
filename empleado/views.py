@@ -10,6 +10,9 @@ def login(request):
 def registration(request):
     return render(request, 'registration/regestrar.html')
 
+def password(request):
+    return render(request, 'registration/olvido_pass.html')
+
 @login_required
 def inicio(request):
     return render(request, 'paginas/inicio.html')
