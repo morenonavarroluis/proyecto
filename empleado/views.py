@@ -1,19 +1,57 @@
+from pyexpat.errors import messages
 from django.shortcuts import render ,redirect
 from .models import Empleado
 from .forms import EmpleadoForm
-from  django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm 
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, logout
+from django.http import HttpResponse
+
+
 # Create your views here.
 
 def login(request):
-    return render(request, 'registration/login.html')
+    # usar get para mostrar el formulario de inicio de sesión
+    if request.method == 'GET':
+        return render(request, 'registration/login.html', {'form': AuthenticationForm()})
+
+    # usar post para autenticar al usuario
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+
+    if user is not None:
+        return redirect('inicio')  # redirecciona a la página de inicio
+    else:
+        #retorna un error si las credenciales son incorrectas
+        return render(request, 'registration/login.html', {
+            'form': AuthenticationForm(),
+            'error': 'Usuario o contraseña incorrectos'
+        })
+
 
 def registration(request):
-    return render(request, 'registration/regestrar.html')
+    if request.method == 'GET':
+
+        return render(request, 'registration/regestrar.html', {'form': UserCreationForm()})
+
+    else:
+        if request.POST['password1'] == request.POST['password2']:
+            try: 
+               user = User.objects.create_user(
+               username=request.POST['username'],
+               email=request.POST['email'],
+               password=request.POST['password1'] )
+               user.save()
+               return render(request, 'registration/regestrar.html', {'form': UserCreationForm(), 'success': 'Usuario creado exitosamente'})
+            except:
+                return render(request, 'registration/regestrar.html', {'form': UserCreationForm, 'error': 'Error al crear el usuario. El nombre de usuario ya existe.'})
+        return render(request, 'registration/regestrar.html', {'form': UserCreationForm, 'error': 'Las contraseñas no coinciden.'})
+     
 
 def password(request):
     return render(request, 'registration/olvido_pass.html')
 
-@login_required
 def inicio(request):
     return render(request, 'paginas/inicio.html')
 
@@ -43,4 +81,6 @@ def eliminar(request, id):
     empleado = Empleado.objects.get(id=id)
     empleado.delete()
     return redirect('index')
+
+
 

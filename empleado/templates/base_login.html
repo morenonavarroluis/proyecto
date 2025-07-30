@@ -14,30 +14,7 @@
   
     {% endblock content %}
 
-    <!-- Font Awesome para los iconos -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
-    <script>
-        // Aquí puedes agregar la lógica de validación del formulario
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
-            if(email && password) {
-                // Simulación de envío de datos
-                alert(`Bienvenido! Redirigiendo...`);
-                // Aquí iría la lógica real de autenticación
-            } else {
-                alert('Por favor complete todos los campos');
-            }
-        });
-
-        // Efecto de carga inicial
-        window.addEventListener('load', function() {
-            document.querySelector('.login-container').style.opacity = '1';
-        });
-    </script>
+   
 </body>
 </html>
 
